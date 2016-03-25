@@ -1,14 +1,9 @@
 `Buzzwords: #elm #reactjs #webpack #es6 #babeljs #hyperscript #enzyme`
 
-- [Version with JavaScript](https://github.com/shanewilson/react-webpack-example/tree/e461a63c7b09d1f57c895be187159caa8ed82fba)
-- [Version with Stylus](https://github.com/shanewilson/react-webpack-example/tree/64e435063f6e9f8aa880965f7ea5099d28e7bf50)
-- [Version with Gulp](https://github.com/shanewilson/react-webpack-example/tree/8132c077870d41fbb08c9b2562b6204ea5cc4a75)
-- [Version with Browser-sync](https://github.com/shanewilson/react-webpack-example/tree/d7d251bea5935ceafdd89700ad6ff986c32c506c)
-
 Goals
 =
 
-Trying to build an Elm application using React components for the view layer. Able to stay within the React ecosystem and take advantage of all the work they are doing and the cool new React components [draft.js](https://facebook.github.io/draft-js/) while gaining the advantages of Elm everywhere else. Added bonus of not having to explain to your boss that you are changing to yet another JS framework.
+Trying to build an Elm application using React components for the view layer. Able to stay within the React ecosystem and take advantage of all the work they are doing and the cool new React components (like [draft.js](https://facebook.github.io/draft-js/)) while gaining the advantages of Elm everywhere else. Added bonus of not having to explain to your boss that you are changing to yet another JS framework.
 
 Technologies
 =
@@ -26,19 +21,21 @@ Development
 The development server is setup using Webpack
 
 ```
-> npm start
-https://localhost:8080/
-webpack result is served from /js/
-content is served from .../react-webpack-example/src
-404s will fallback to /index.html
-Hash: 6304c41877c95731fb5f
-Version: webpack 1.8.9
-Time: 4620ms
-      Asset     Size  Chunks             Chunk Names
-    main.js  1.38 MB       0  [emitted]  main
-main.js.map  1.51 MB       0  [emitted]  main
-chunk    {0} main.js, main.js.map (main) 1.21 MB [rendered]
-...
+❯ npm start
+
+> react-elm-example@0.0.1 start /Users/swilson/Documents/Development/js/react-elm-example
+> NODE_ENV=development make server
+
+⌛  Webpack bundling assets for the first time...
+⚡  Server running at localhost:8080
+   Proxying to API running at http://localhost:5000
+Success! Compiled 1 modules.
+Successfully generated /var/folders/r8/ysx65v5109qcg857_5sm60500000gp/T/116225-97216-jxzv2j.js
+webpack built 9d06a86811439ddd0838 in 1911ms
+Version: webpack 1.12.14
+Time: 1911ms
+    Asset     Size  Chunks             Chunk Names
+bundle.js  3.88 MB       0  [emitted]  bundle
 webpack: bundle is now VALID.
 ```
 
@@ -48,24 +45,27 @@ Tests
 Unit tests are run using Karma.
 
 ```
-> npm test
-...
+❯ npm test
+
+> react-elm-example@0.0.1 test
+> make prepare
+
 lint                           [OK]
 cd src/elm/tests && elm-test TestRunner.elm
 Successfully compiled TestRunner.elm
 Running tests...
-  1 suites run, containing 3 tests
+  2 suites run, containing 4 tests
   All tests passed
 elm-test                       [OK]
 TEST_ENV=single karma start karma.config.js
 Success! Compiled 1 modules.
-Successfully generated /var/folders/r8/ysx65v5109qcg857_5sm60500000gp/T/11623-50010-9a7ute.js
+Successfully generated
 Success! Compiled 1 modules.
-Successfully generated /var/folders/r8/ysx65v5109qcg857_5sm60500000gp/T/11623-50010-133a3zf.js
-03 03 2016 22:45:08.798:INFO [karma]: Karma v0.13.21 server started at http://localhost:9876/
-03 03 2016 22:45:08.806:INFO [launcher]: Starting browser PhantomJS
-03 03 2016 22:45:09.286:INFO [PhantomJS 2.1.1 (Mac OS X 0.0.0)]: Connected on socket /#qyKrsDHSmut4Iun7AAAA with id 89219559
-PhantomJS 2.1.1 (Mac OS X 0.0.0): Executed 1 of 1 SUCCESS (0.007 secs / 0.003 secs)
+Successfully generated
+25 03 2016 15:30:02.316:INFO [karma]: Karma v0.13.22 server started at http://localhost:9876/
+25 03 2016 15:30:02.324:INFO [launcher]: Starting browser PhantomJS
+25 03 2016 15:30:02.835:INFO [PhantomJS 2.1.1 (Mac OS X 0.0.0)]: Connected on socket /#Y7Csf4vbjNoueI-zAAAA with id 86416930
+PhantomJS 2.1.1 (Mac OS X 0.0.0): Executed 11 of 11 SUCCESS (0.017 secs / 0.01 secs)
 test-once                      [OK]
 prepare                        [OK]
 ```
@@ -81,7 +81,7 @@ NODE_ENV=production npm run build
 clean-dist                     [OK]
 build                          [production]
 Success! Compiled 1 modules.
-Successfully generated /var/folders/r8/ysx65v5109qcg857_5sm60500000gp/T/11623-50312-1f6pfa6.js
+Successfully generated
 Hash: 9e2541bd1a87d3bc6151
 Version: webpack 1.12.14
 Time: 6283ms
