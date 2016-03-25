@@ -1,0 +1,21 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": 0
+  },
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "jasmine": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "__BASE__": true,
+    "__DEBUG__": true,
+    "__DEV__": true,
+    "sinon": true
+  }
+}
