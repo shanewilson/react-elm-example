@@ -26,7 +26,7 @@ export default {
       {
         test: /\.elm$/,
         loader: 'elm-webpack',
-        exclude: ['elm-stuff', 'node_modules'],
+        exclude: [/elm-stuff/, /node_modules/],
       },
       {
         test: /\.json$/,
